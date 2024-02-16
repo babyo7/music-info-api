@@ -15,7 +15,10 @@ router.get("/", async (req, res) => {
             title: music.title,
             artist: music.author.name,
             audio: music.shortUrl,
-            cover: "Cover/" + randomCover() + ".webp",
+            cover:  "https://your-napster.vercel.app" +
+          "/Cover/" +
+          randomCover() +
+          ".webp",
       }))
       res.json(musicList);
     } catch (error) {
