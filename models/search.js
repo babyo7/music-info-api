@@ -6,7 +6,7 @@ async function search(query) {
     pages: 0,
   });
   let count = 0
-  for(let i =0;i<searchResults.items.length && count<=8;i++){
+  for(let i =0;i<searchResults.items.length && count<=10;i++){
     if(i,searchResults.items[i].type == "video"){
         const duration= (searchResults.items[i].duration).split(":").map(Number)
         if(duration.length==2){
