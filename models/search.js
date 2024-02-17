@@ -26,7 +26,18 @@ async function search(query) {
     }
   }
   
-  return SearchData
+  return SearchData.length > 0
+    ? SearchData
+    : [
+        {
+          id: 0,
+          title: "The Chainsmokers - Closer (Lyrics) ft. Halsey",
+          artist: "7clouds",
+          audio: "https://www.youtube.com/watch?v=25ROFXjoaAU",
+          cover:
+            "https://i.ytimg.com/vi/25ROFXjoaAU/hq720.jpg?sqp=-oaymwEXCNAFEJQDSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAhp5QxOR_Z3E8qsA2CaOaPOQmGng",
+        },
+      ];
 
 }
 
