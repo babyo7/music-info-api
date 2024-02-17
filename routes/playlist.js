@@ -45,7 +45,7 @@ router.get("/:s?", async (req, res) => {
     res.json(await Search(query));
   } catch (error) {
     if (error.message == "Cannot read properties of null (reading 'split')") {
-      res.status(200).json(de);
+      res.status(200).json([de]);
       return;
     }
     res.status(500).json({ message: error.message });
